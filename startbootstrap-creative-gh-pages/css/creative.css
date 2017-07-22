@@ -414,3 +414,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+#tahim {
+    width: 20%;
+}
+#img-circle {
+    border-radius: 50%;
+}

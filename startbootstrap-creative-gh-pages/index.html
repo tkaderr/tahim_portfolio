@@ -25,6 +25,21 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.modal').each(function(){
+            var src = $(this).find('iframe').attr('src');
+
+        $(this).on('click', function(){
+
+            $(this).find('iframe').attr('src', '');
+            $(this).find('iframe').attr('src', src);
+
+        });
+    });
+    });
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,6 +87,7 @@
     <header>
         <div class="header-content">
             <div id = "bright" class="header-content-inner">
+                <img src="img/tahim2.png" class="img-circle tahim" alt/>
                 <h1 id="homeHeading">TAHIM KADER</h1>
                 <hr>
                 <p>FULL STACK WEB DEVELOPER | MOBILE DEVELOPER | PRODUCT MANAGER</p>
@@ -90,7 +106,7 @@
                     <p class="text-faded">I recently attended and completed an intense bootcamp in San Jose called Coding Dojo, which is an immersive full stack and mobile development bootcamp. Coding Dojo offers many of the industry's most relevant technologies, such as Python, MEAN, and Swift.</p>
                     <p class="text-faded">I love to read, travel, eat food, and code!</p>
                     <p class="text-faded">Want to learn more about me? Check my links below!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Resume</a>
+                    <a href="img/resume.pdf" class="page-scroll btn btn-default btn-xl sr-button" download>Resume</a>
                     <a href="https://www.linkedin.com/in/tahimkader/" class="page-scroll btn btn-default btn-xl sr-button">LinkedIn</a>
                     <a href="https://github.com/tkaderr" class="page-scroll btn btn-default btn-xl sr-button">Github</a>
                 </div>
@@ -200,97 +216,70 @@
           </div>
       </aside>
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6 project">
+                    <a class="portfolio-box popup-modal" href="#modal-rental" data-target="#modalrental" data-toggle="modal" data-effect="mfp-zoom-in">
+                        <img src="img/portfolio/thumbnails/RentalApp.png" class="img-responsive" alt="" style="width:548px;height:223.41px;">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Web-Python
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    RentalApp
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box popup-modal" href="#modal-space" data-target="#modalspace" data-toggle="modal" data-effect="mfp-zoom-in">
+                        <img src="img/portfolio/thumbnails/asteroid3.png" class="img-responsive" alt="" style="width:548px;height:223.41px;">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Mobile-Swift
+                                </div>
+                                <div class="project-name">
+                                    Super Asteroid Frenzy
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box popup-modal" href="#modal-color" data-target="#modalcolor" data-toggle="modal" data-effect="mfp-zoom-in">
+                        <img src="img/portfolio/thumbnails/color2.png" class="img-responsive" alt="" style="width:548px;height:223.41px;">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Mobile-Swift
+                                </div>
+                                <div class="project-name">
+                                    Color Frenzy
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                    <a class="portfolio-box popup-modal" href="#modal-pickup" data-target="#modalpickup" data-toggle="modal" data-effect="mfp-zoom-in">
+                        <img src="img/portfolio/thumbnails/pickup2.png" class="img-responsive" alt="" style="width:548px;height:223.41px;">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Mobile-Swift
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    PickUp
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -303,18 +292,109 @@
                     <hr class="primary">
                     <p>Want to chat or connect with me? Do you have a spot on your team? Great! Feel free to send me an email, and I will get back to you as soon as possible!</p>
                 </div>
-                <!-- <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
-                </div> -->
                 <div class="col-lg-12 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-      
-                    <p><a href="mailto:tahim.kader@gmail.com">tahim.kader@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
+                    <a href="mailto:tahim.kader@gmail.com"><i class="fa fa-envelope-o fa-3x sr-contact" style="padding:15px"></i></a>
+                    <a href="https://www.linkedin.com/in/tahimkader/" class="fa fa-linkedin fa-3x sr-contact" style="padding:15px"></a>
+                    <a href="https://github.com/tkaderr" class="fa fa-github fa-3x sr-contact" style="padding:15px"></a>
+                  </div>
+              </div>
     </section>
+
+    <div class="modal fade" id="modalrental" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="myModalLabel"><b>RentalApp</b></h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>RentalApp is a web application that allows users to post and rent products.</p>
+            <p><i>Python, Django, SQL, HTML, CSS, JavaScript, JQuery, Bootstrap</i></p>
+            <div class ="video-container">
+              <iframe width ="560" height ="315" src ="https://www.youtube.com/embed/cXC8mXgmm70" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-md-9">
+              Code:<a href="https://github.com/tkaderr/rental_app" ><button type="button" class="btn btn-primary">Github</button></a>
+              Website:<a href="https://our-things.herokuapp.com" ><button type="button" class="btn btn-primary">Link</button></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalspace" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="myModalLabel"><b>Super Asteroid Frenzy</b></h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>Super Asteroid Frenzy is an IOS application where the user controls a space ship that shoots on-coming asteroids.</p>
+            <p><i>Swift, Xcode, Spritekit</i></p>
+            <div class ="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xUcO3Q1_x6Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-md-9 text">
+              Code:<a href="https://github.com/tkaderr/super_asteroid_frenzy" ><button type="button" class="btn btn-primary">Github</button></a>
+              Website:<a href="https://itunes.apple.com/app/id1244314875" ><button type="button" class="btn btn-primary">Link</button></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalcolor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="myModalLabel"><b>Color Frenzy</b></h4>
+          </div>
+          <div class="modal-body text-center">
+            <p> Color Frenzy is an iOS application built in 24 hours where the user tries to match a color by rotating the device.</p>
+            <p><i>Core Motion, Swift, Xcode, AudioToolbox, AVFoundation</i></p>
+            <div class ="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/WhYZ5BmQbIk" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-md-8">
+              Code:<a href="https://github.com/tkaderr/color_frenzy" ><button type="button" class="btn btn-primary">Github</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalpickup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="myModalLabel"><b>PickUp</b></h4>
+          </div>
+          <div class="modal-body text-center">
+            <p>PickUp is an iOS application built in 24 hours that provides an easy platform to create pick-up games, coordinate game times and connect with new people.</p>
+            <p><i>Core Location, MapKit, Swift, Xcode, Django Rest API</i></p>
+            <div class ="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/oWANuur_ANE" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-md-8">
+              Code:<a href="https://github.com/tkaderr/ios_pickup" ><button type="button" class="btn btn-primary">Github</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
